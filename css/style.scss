@@ -1,0 +1,294 @@
+/*
+ * Setup
+ */
+
+$main-color: #1C344C;
+$emphasize-color-1: #1eb4f2;
+$emphasize-color-2: #d60006;
+$text-color-dark: #252525;
+$text-color-bright: #FAFAFA;
+$section-emphasize: #bfe5fb;
+
+/*
+ * General
+ */
+
+body {
+  color: $text-color-dark;
+}
+
+.text-bright {
+  color: $text-color-bright;
+}
+
+.text-emphasize {
+  color: $emphasize-color-1;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-emphasize {
+  background: $main-color;
+}
+
+.space60 {
+  &.right {
+    padding-right: 60px;
+  }
+  &.left {
+    padding-left: 60px;
+  }
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+/*
+ * Links
+ */
+
+a {
+  color: $emphasize-color-1;
+  transition: color ease 200ms;
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color-dark;
+    transition: color ease 200ms;
+  }
+}
+
+/*
+ * Headlines
+ */
+
+h2.display-4 {
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+}
+
+/*
+ * Buttons
+ */
+
+.transparent-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+
+  &:hover {
+    background-color: $text-color-bright;
+    color: $main-color;
+  }
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-primary {
+  background: $emphasize-color-1;
+  border-color: $emphasize-color-1;
+  border-width: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    background: none;
+    border-color: $emphasize-color-1;
+    color: $emphasize-color-1
+  }
+}
+
+.btn-white {
+  background: white;
+  border: 2px solid $text-color-bright;
+  color: $text-color-dark;
+  transition: color ease 200ms;
+
+  &:hover {
+    color: $text-color-dark;
+    background: white;
+    transition: color ease 200ms;
+  }
+}
+
+/*
+ * Navbar
+ */
+
+.floating-navbar {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.hero-navbar {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-elements {
+  list-style: none;
+
+  li {
+    text-align: right;
+    padding: 5px 20px 5px 0;
+    border-right: 2px solid white;
+  }
+
+  a {
+    color: white;
+    transition: padding-right ease 100ms;
+
+    &:hover {
+      text-decoration: none;
+      padding-right: 5px;
+    }
+  }
+}
+
+/*
+ * Hero
+ */
+
+.hero {
+  background-color: $main-color;
+  //background-image: url("/images/hero-background.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0;
+  height: 100vh;
+  position: relative;
+  margin-bottom: 0;
+
+  .position-bottom {
+    position: absolute;
+    bottom: 20px;
+    color: $text-color-bright;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+}
+
+/*
+ * About section
+ */
+
+.profile {
+  border-right: 1px solid #cacaca;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    position: relative;
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+}
+
+.about {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonials-wrapper {
+  overflow: hidden;
+}
+
+.testimonials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .element {
+    display: none;
+    padding: 20px 0 0 0;
+
+    &.active {
+      display: block;
+    }
+
+    .quote {
+      font-size: 28px;
+      font-style: italic;
+      margin: 0;
+      line-height: initial;
+    }
+    .author {
+      font-style: italic;
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+/*
+ * Skills section
+ */
+
+.progress {
+  margin-bottom: 12px;
+}
+
+#skills {
+  color: white;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .progress {
+    border-radius: 0;
+  }
+
+  .progress-bar {
+    padding-left: 10px;
+    text-align: left;
+    color: $main-color;
+    background-color: $emphasize-color-1;
+  }
+}
+
+/*
+ * Education and work experience section
+ */
+
+#education {
+  ul {
+    list-style: none;
+    border-left: 2px solid;
+    padding-left: 20px;
+    margin-left: 20px;
+
+    li {
+      margin-bottom: 1.5rem;
+
+      h6 {
+        margin-bottom: 0.2rem;
+        font-weight: 600;
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
