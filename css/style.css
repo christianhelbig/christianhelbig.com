@@ -106,7 +106,6 @@ h3 {
 .floating-navbar {
   display: none;
   position: absolute;
-  right: 0;
   z-index: 99;
   top: 50%;
   transform: translateY(-50%);
@@ -141,7 +140,8 @@ h3 {
  * Hero
  */
 .hero {
-  background-color: #1C344C;
+  background: #1C344C;
+  background: linear-gradient(to top, rgba(22, 42, 64, 0.86), rgba(33, 68, 106, 0.68)), url(/images/hero-background.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 0;
@@ -162,7 +162,7 @@ h3 {
  * About section
  */
 .profile {
-  border-right: 1px solid #cacaca;
+  border-right: 1px solid #e5e5e5;
   flex-direction: column;
   justify-content: center;
 }
@@ -174,6 +174,7 @@ h3 {
 }
 .profile h3 {
   margin-bottom: 5px;
+  font-weight: 400;
 }
 
 .about {

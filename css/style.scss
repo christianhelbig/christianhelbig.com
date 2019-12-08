@@ -125,7 +125,6 @@ h3 {
 .floating-navbar {
   display: none;
   position: absolute;
-  right: 0;
   z-index: 99;
   top: 50%;
   transform: translateY(-50%);
@@ -164,8 +163,8 @@ h3 {
  */
 
 .hero {
-  background-color: $main-color;
-  //background-image: url("/images/hero-background.png");
+  background: $main-color;
+  background: linear-gradient(to top, rgba(22, 42, 64, 0.86), rgba(33, 68, 106, 0.68)), url(/images/hero-background.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 0;
@@ -188,7 +187,7 @@ h3 {
  */
 
 .profile {
-  border-right: 1px solid #cacaca;
+  border-right: 1px solid #e5e5e5;
   flex-direction: column;
   justify-content: center;
 
@@ -201,6 +200,7 @@ h3 {
 
   h3 {
     margin-bottom: 5px;
+    font-weight: 400;
   }
 }
 
