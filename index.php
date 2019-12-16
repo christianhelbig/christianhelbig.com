@@ -174,9 +174,12 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <h2 class="display-4">Contact</h2>
-                    You can email me here or text me on linked in - whatever
+                    <p>You want to offer me a job or have a question? Please send me a mail and I will get back to you as soon as possible!</p>
+                    <a href="mailto.php"><button type="button" class="btn btn-primary contact">E-Mail</button></a>
+                </div>
+                <div class="col-md-4">
                 </div>
             </div>
         </div>
