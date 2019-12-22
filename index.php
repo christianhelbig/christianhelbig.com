@@ -8,9 +8,9 @@
             <h1 class="display-3 text-bright">Hello, I'm <span class="text-emphasize">Christian Helbig</span>!</h1>
             <p class="font-italic text-bright">computer science undergraduate // tech enthusiast // aspiring
                 developer</p>
-            <a class="btn transparent-btn text-bright" href=""><i class="fab fa-linkedin-in"></i></a>
-            <a class="btn transparent-btn text-bright" href=""><i class="fab fa-github"></i></a>
-            <a class="btn transparent-btn text-bright" href=""><i class="fas fa-envelope"></i></a>
+            <!-- LinkedIn -->       <a class="btn transparent-btn text-bright" target="_blank" href="https://www.linkedin.com/in/christian-helbig/"><i class="fab fa-linkedin-in"></i></a>
+            <!-- GitHub -->         <a class="btn transparent-btn text-bright" target="_blank" href="https://github.com/christianhelbig"><i class="fab fa-github"></i></a>
+            <!-- Contact form -->   <a class="btn transparent-btn text-bright" href="#contact"><i class="fas fa-envelope"></i></a>
         </div>
         <div class="container position-bottom">
             <i class="fas fa-chevron-down"></i>
@@ -27,7 +27,7 @@
                     <img src="images/profilepic.png">
                     <h3>Christian Helbig</h3>
                     <p>Berlin, Germany</p>
-                    <button type="button" class="btn btn-primary contact">Contact me</button>
+                    <a class="btn btn-primary contact" href="#contact" role="button">Contact me</a>
                 </div>
                 <!-- RIGHT SIDE - ABOUT SECTION-->
                 <div class="col-md-8 d-flex space60 left about">
@@ -165,8 +165,8 @@
                 <div class="col-md-9 d-flex">
                     <h1 class="text-bright">Check out my GitHub!</h1>
                 </div>
-                <div class="col-md-3 d-flex">
-                    <button type="button" class="btn btn-white btn-block"><i class="fab fa-github"></i> GitHub</button>
+                <div class="col-md-3 d-flex flex-vcenter">
+                    <a class="btn btn-light btn-block btn-valign-center btn-icon" target="_blank" href="https://github.com/christianhelbig" role="button"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
         </div>

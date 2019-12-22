@@ -2,11 +2,19 @@
  * Setup
  */
 
-$main-color: #1C344C;
+/*$main-color: #1C344C;
 $emphasize-color-1: #1eb4f2;
-$emphasize-color-2: #d60006;
+$emphasize-color-2: #296199;
 $text-color-dark: #252525;
 $text-color-bright: #FAFAFA;
+$text-color-gray: #FAFAFA;
+$section-emphasize: #bfe5fb;*/
+
+$main-color: #021859;
+$emphasize-color-1: #07C7F2;
+$emphasize-color-2: #021382;
+$text-color-dark: #021859;
+$text-color-bright: #F2F2F2;
 $section-emphasize: #bfe5fb;
 
 /*
@@ -44,6 +52,14 @@ body {
 
 .grecaptcha-badge {
   display: none !important;
+}
+
+/*
+ * Sections
+ */
+
+.flex-vcenter {
+  align-items: center;
 }
 
 /*
@@ -99,23 +115,33 @@ h3 {
   text-transform: uppercase;
 
   &:hover {
-    background: none;
-    border-color: $emphasize-color-1;
-    color: $emphasize-color-1
+    background: $emphasize-color-2;
+    border-color: $emphasize-color-2;
   }
 }
 
-.btn-white {
-  background: white;
-  border: 2px solid $text-color-bright;
-  color: $text-color-dark;
-  transition: color ease 200ms;
+.btn-light {
+  background: $text-color-bright;
+  border-color: $text-color-bright;
+  color: $main-color;
+  border-width: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
 
   &:hover {
-    color: $text-color-dark;
-    background: white;
-    transition: color ease 200ms;
+    background: $emphasize-color-2;
+    border-color: $emphasize-color-2;
   }
+}
+
+.btn-valign-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  margin-right: 5px;
 }
 
 /*
@@ -164,7 +190,7 @@ h3 {
 
 .hero {
   background: $main-color;
-  background: linear-gradient(to top, rgba(22, 42, 64, 0.86), rgba(33, 68, 106, 0.68)), url(/images/hero-background.jpg);
+  background: linear-gradient(37deg, rgba(65, 17, 74, 0.84), rgba(33, 68, 106, 0.68)), url(/images/hero-background.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 0;
@@ -292,3 +318,10 @@ h3 {
   }
 }
 
+/*
+ * Footer
+ */
+
+.footer {
+  background: $main-color;
+}

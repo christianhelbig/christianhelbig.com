@@ -1,19 +1,26 @@
 /*
  * Setup
  */
+/*$main-color: #1C344C;
+$emphasize-color-1: #1eb4f2;
+$emphasize-color-2: #296199;
+$text-color-dark: #252525;
+$text-color-bright: #FAFAFA;
+$text-color-gray: #FAFAFA;
+$section-emphasize: #bfe5fb;*/
 /*
  * General
  */
 body {
-  color: #252525;
+  color: #021859;
 }
 
 .text-bright {
-  color: #FAFAFA;
+  color: #F2F2F2;
 }
 
 .text-emphasize {
-  color: #1eb4f2;
+  color: #07C7F2;
 }
 
 .section {
@@ -21,7 +28,7 @@ body {
 }
 
 .section-emphasize {
-  background: #1C344C;
+  background: #021859;
 }
 
 .space60.right {
@@ -36,15 +43,22 @@ body {
 }
 
 /*
+ * Sections
+ */
+.flex-vcenter {
+  align-items: center;
+}
+
+/*
  * Links
  */
 a {
-  color: #1eb4f2;
+  color: #07C7F2;
   transition: color ease 200ms;
 }
 a:hover {
   text-decoration: none;
-  color: #252525;
+  color: #021859;
   transition: color ease 200ms;
 }
 
@@ -67,8 +81,8 @@ h3 {
   border-radius: 0;
 }
 .transparent-btn:hover {
-  background-color: #FAFAFA;
-  color: #1C344C;
+  background-color: #F2F2F2;
+  color: #021859;
 }
 
 .btn {
@@ -76,28 +90,38 @@ h3 {
 }
 
 .btn-primary {
-  background: #1C344C;
-  border-color: #1C344C;
+  background: #021859;
+  border-color: #021859;
   border-width: 2px;
   font-weight: bold;
   text-transform: uppercase;
 }
 .btn-primary:hover {
-  background: none;
-  border-color: #1eb4f2;
-  color: #1eb4f2;
+  background: #021382;
+  border-color: #021382;
 }
 
-.btn-white {
-  background: white;
-  border: 2px solid #FAFAFA;
-  color: #252525;
-  transition: color ease 200ms;
+.btn-light {
+  background: #F2F2F2;
+  border-color: #F2F2F2;
+  color: #021859;
+  border-width: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.btn-white:hover {
-  color: #252525;
-  background: white;
-  transition: color ease 200ms;
+.btn-light:hover {
+  background: #021382;
+  border-color: #021382;
+}
+
+.btn-valign-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  margin-right: 5px;
 }
 
 /*
@@ -140,8 +164,8 @@ h3 {
  * Hero
  */
 .hero {
-  background: #1C344C;
-  background: linear-gradient(to top, rgba(22, 42, 64, 0.86), rgba(33, 68, 106, 0.68)), url(/images/hero-background.jpg);
+  background: #021859;
+  background: linear-gradient(37deg, rgba(65, 17, 74, 0.84), rgba(33, 68, 106, 0.68)), url(/images/hero-background.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 0;
@@ -152,7 +176,7 @@ h3 {
 .hero .position-bottom {
   position: absolute;
   bottom: 20px;
-  color: #FAFAFA;
+  color: #F2F2F2;
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
@@ -228,8 +252,8 @@ h3 {
 #skills .progress-bar {
   padding-left: 10px;
   text-align: left;
-  color: #1C344C;
-  background-color: #1eb4f2;
+  color: #021859;
+  background-color: #07C7F2;
 }
 
 /*
@@ -250,6 +274,13 @@ h3 {
 }
 #education ul li:last-child {
   margin-bottom: 0;
+}
+
+/*
+ * Footer
+ */
+.footer {
+  background: #021859;
 }
 
 /*# sourceMappingURL=style.css.map */
