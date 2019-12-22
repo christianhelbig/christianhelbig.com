@@ -97,21 +97,22 @@ h3 {
   text-transform: uppercase;
 }
 .btn-primary:hover {
-  background: #021382;
-  border-color: #021382;
+  background: #B52072;
+  border-color: #B52072;
 }
 
 .btn-light {
-  background: #F2F2F2;
-  border-color: #F2F2F2;
+  background: #07C7F2;
+  border-color: #07C7F2;
   color: #021859;
   border-width: 2px;
   font-weight: bold;
   text-transform: uppercase;
 }
 .btn-light:hover {
-  background: #021382;
-  border-color: #021382;
+  color: #F2F2F2;
+  background: #B52072;
+  border-color: #B52072;
 }
 
 .btn-valign-center {

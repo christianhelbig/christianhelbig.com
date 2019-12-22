@@ -12,7 +12,7 @@ $section-emphasize: #bfe5fb;*/
 
 $main-color: #021859;
 $emphasize-color-1: #07C7F2;
-$emphasize-color-2: #021382;
+$emphasize-color-2: #B52072;
 $text-color-dark: #021859;
 $text-color-bright: #F2F2F2;
 $section-emphasize: #bfe5fb;
@@ -121,14 +121,15 @@ h3 {
 }
 
 .btn-light {
-  background: $text-color-bright;
-  border-color: $text-color-bright;
-  color: $main-color;
+  background: $emphasize-color-1;
+  border-color: $emphasize-color-1;
+  color: $text-color-dark;
   border-width: 2px;
   font-weight: bold;
   text-transform: uppercase;
 
   &:hover {
+    color: $text-color-bright;
     background: $emphasize-color-2;
     border-color: $emphasize-color-2;
   }
