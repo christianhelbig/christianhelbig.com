@@ -1,14 +1,14 @@
 
-    <div class="footer">
+    <div id="footer" class="text-bright section-slim section-emphasize">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <!--<p class="copyright">&copy; Copyright - Christian Helbig <?php echo date('Y')?></p>-->
+                <div class="col-md-6">
+                    <p class="copyright">&copy; Copyright <?php echo date('Y')?> - Christian Helbig</p>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <ul class="footer-nav">
-                        <li>Impressum</li>
-                        <li>Datenschutz</li>
+                        <li><a href="/impressum.php">Impressum</a></li>
+                        <li><a href="/datenschutz.php">Datenschutz</a></li>
                     </ul>
                 </div>
             </div>
