@@ -1,13 +1,8 @@
 /*
  * Setup
  */
-/*$main-color: #1C344C;
-$emphasize-color-1: #1eb4f2;
-$emphasize-color-2: #296199;
-$text-color-dark: #252525;
-$text-color-bright: #FAFAFA;
-$text-color-gray: #FAFAFA;
-$section-emphasize: #bfe5fb;*/
+/* COLORS */
+/* MEDIA QUERIES */
 /*
  * General
  */
@@ -39,11 +34,21 @@ body {
   background: #021859;
 }
 
-.space60.right {
-  padding-right: 60px;
+@media screen and (min-width: 992px) {
+  .space60.right {
+    padding-right: 60px;
+  }
+  .space60.left {
+    padding-left: 60px;
+  }
 }
-.space60.left {
-  padding-left: 60px;
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .space60.right {
+    padding-right: 30px;
+  }
+  .space60.left {
+    padding-left: 30px;
+  }
 }
 
 .grecaptcha-badge {
@@ -56,6 +61,18 @@ body {
 .flex-vcenter {
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .bottom-space-md {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bottom-space-lg {
+    margin-bottom: 40px;
+  }
 }
 
 /*
@@ -76,6 +93,11 @@ a:hover {
  */
 h2.display-4 {
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 577px) {
+  h2.display-4 {
+    font-size: 10vw;
+  }
 }
 
 h3 {
@@ -99,7 +121,7 @@ h3 {
   border-radius: 0;
 }
 .transparent-btn-dark:hover {
-  background-color: #F2F2F2;
+  background-color: #fefefe;
   color: #021859;
 }
 
@@ -161,6 +183,11 @@ h3 {
   top: 50%;
   transform: translateY(-50%);
 }
+@media screen and (max-width: 767px) {
+  .hero-navbar {
+    display: none;
+  }
+}
 
 .navbar-elements {
   list-style: none;
@@ -192,6 +219,19 @@ h3 {
   position: relative;
   margin-bottom: 0;
 }
+@media screen and (max-width: 587px) {
+  .hero h1 {
+    font-size: 11vw;
+  }
+  .hero p {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (min-width: 767px) {
+  .hero {
+    padding: 120px;
+  }
+}
 .hero .position-bottom {
   position: absolute;
   bottom: 20px;
@@ -209,15 +249,40 @@ h3 {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .profile {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile {
+    border-right: none;
+  }
+}
 .profile img {
   position: relative;
   max-width: 100%;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 576px) {
+  .profile img {
+    max-width: 250px;
+  }
+}
 .profile h3 {
   margin-bottom: 5px;
   font-weight: 400;
+}
+
+.med-6 {
+  flex-basis: unset;
+}
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .med-6 {
+    flex-basis: 50%;
+  }
 }
 
 .about {
@@ -296,6 +361,15 @@ h3 {
 }
 
 /*
+ * Github
+ */
+@media screen and (max-width: 767px) {
+  #projects .d-flex {
+    justify-content: center;
+  }
+}
+
+/*
  * Contact
  */
 .contact-form #message {
@@ -306,11 +380,31 @@ h3 {
 .vcard-wrapper {
   padding: 0 40px;
 }
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .vcard-wrapper {
+    padding: 0;
+  }
+}
 
 .vcard {
   text-align: center;
   padding: 40px;
   background: #f4f4f4;
+  flex-direction: column;
+}
+.vcard .large-6 {
+  flex-basis: unset;
+}
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .vcard .large-6 {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 767px) {
+  .vcard {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .vcard img {
   position: relative;
@@ -325,6 +419,15 @@ h3 {
 /*
  * Footer
  */
+@media screen and (max-width: 767px) {
+  #footer .col-md-6 {
+    text-align: center;
+  }
+  #footer .col-md-6:first-child {
+    margin-bottom: 10px;
+  }
+}
+
 .copyright {
   margin: 0;
 }
@@ -332,9 +435,22 @@ h3 {
 .footer-nav {
   list-style: none;
 }
+@media screen and (max-width: 767px) {
+  .footer-nav {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
 .footer-nav li {
   float: right;
   margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .footer-nav li:last-child {
+    margin-left: 0;
+  }
 }
 .footer-nav li a {
   color: #F2F2F2;

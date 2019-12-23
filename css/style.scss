@@ -2,14 +2,7 @@
  * Setup
  */
 
-/*$main-color: #1C344C;
-$emphasize-color-1: #1eb4f2;
-$emphasize-color-2: #296199;
-$text-color-dark: #252525;
-$text-color-bright: #FAFAFA;
-$text-color-gray: #FAFAFA;
-$section-emphasize: #bfe5fb;*/
-
+/* COLORS */
 $main-color: #021859;
 $emphasize-color-1: #07C7F2;
 $emphasize-color-2: #B52072;
@@ -17,6 +10,11 @@ $text-color-dark: #021859;
 $text-color-bright: #F2F2F2;
 $section-emphasize: #bfe5fb;
 $box-background: #f4f4f4;
+
+/* MEDIA QUERIES */
+$break-small: 577px;
+$break-medium: 767px;
+$break-large: 992px;
 
 /*
  * General
@@ -51,11 +49,22 @@ body {
 }
 
 .space60 {
-  &.right {
-    padding-right: 60px;
+  @media screen and (min-width: $break-large) {
+    &.right {
+      padding-right: 60px;
+    }
+    &.left {
+      padding-left: 60px;
+    }
   }
-  &.left {
-    padding-left: 60px;
+
+  @media screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+    &.right {
+      padding-right: 30px;
+    }
+    &.left {
+      padding-left: 30px;
+    }
   }
 }
 
@@ -70,6 +79,18 @@ body {
 .flex-vcenter {
   flex-direction: column;
   justify-content: center;
+}
+
+.bottom-space-md {
+  @media screen and (max-width: $break-medium) {
+    margin-bottom: 40px;
+  }
+}
+
+.bottom-space-lg {
+  @media screen and (max-width: $break-large) {
+    margin-bottom: 40px;
+  }
 }
 
 /*
@@ -93,6 +114,10 @@ a {
 
 h2.display-4 {
   margin-bottom: 1.5rem;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 10vw;
+  }
 }
 
 h3 {
@@ -118,7 +143,7 @@ h3 {
   border-radius: 0;
 
   &:hover {
-    background-color: $text-color-bright;
+    background-color: #fefefe;
     color: $main-color;
   }
 }
@@ -183,6 +208,10 @@ h3 {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+
+  @media screen and (max-width: $break-medium) {
+    display: none;
+  }
 }
 
 .navbar-elements {
@@ -219,6 +248,19 @@ h3 {
   position: relative;
   margin-bottom: 0;
 
+  @media screen and (max-width: $break-small + 10) {
+    h1 {
+      font-size: 11vw;
+    }
+    p {
+      font-size: 3.5vw;
+    }
+  }
+
+  @media screen and (min-width: $break-medium) {
+    padding: 120px;
+  }
+
   .position-bottom {
     position: absolute;
     bottom: 20px;
@@ -238,16 +280,37 @@ h3 {
   flex-direction: column;
   justify-content: center;
 
+  @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    border-right: none;
+  }
+
   img {
     position: relative;
     max-width: 100%;
     border-radius: 50%;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: $break-small - 1) {
+      max-width: 250px;
+    }
   }
 
   h3 {
     margin-bottom: 5px;
     font-weight: 400;
+  }
+}
+
+.med-6 {
+  flex-basis: unset;
+
+  @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    flex-basis: 50%;
   }
 }
 
@@ -340,6 +403,16 @@ h3 {
 }
 
 /*
+ * Github
+ */
+
+#projects .d-flex {
+  @media screen and (max-width: $break-medium) {
+    justify-content: center;
+  }
+}
+
+/*
  * Contact
  */
 
@@ -349,12 +422,30 @@ h3 {
 
 .vcard-wrapper {
   padding: 0 40px;
+
+  @media screen and (min-width: $break-small) and (max-width: $break-large) {
+    padding: 0;
+  }
 }
 
 .vcard {
   text-align: center;
   padding: 40px;
   background: $box-background;
+  flex-direction: column;
+
+  .large-6 {
+    flex-basis: unset;
+
+    @media screen and (min-width: $break-medium) and (max-width: $break-large) {
+      flex-basis: 50%;
+    }
+  }
+
+  @media screen and (max-width: $break-large) and (min-width: $break-medium) {
+    flex-direction: row;
+    align-items: center;
+  }
 
   img {
     position: relative;
@@ -372,6 +463,16 @@ h3 {
  * Footer
  */
 
+#footer .col-md-6 {
+  @media screen and (max-width: $break-medium) {
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .copyright {
   margin: 0;
 }
@@ -379,9 +480,22 @@ h3 {
 .footer-nav {
   list-style: none;
 
+  @media screen and (max-width: $break-medium) {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
   li {
     float: right;
     margin-left: 20px;
+
+    @media screen and (max-width: $break-medium) {
+      &:last-child {
+        margin-left: 0;
+      }
+    }
 
     a {
       color: $text-color-bright;

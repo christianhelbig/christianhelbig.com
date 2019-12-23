@@ -27,11 +27,15 @@
         <div class="container">
             <div class="row">
                 <!-- LEFT SIDE - PROFILE AREA-->
-                <div class="col-md-4 d-flex profile text-center space60 right">
-                    <img src="<?php echo $profile_url ?>">
-                    <h3>Christian Helbig</h3>
-                    <p>Berlin, Germany</p>
-                    <a class="btn btn-primary contact" href="#contact" role="button">Contact me</a>
+                <div class="col-md-4 d-flex profile text-center space60 right bottom-space-md">
+                    <div class="med-6">
+                        <img src="<?php echo $profile_url ?>">
+                    </div>
+                    <div class="med-6">
+                        <h3>Christian Helbig</h3>
+                        <p>Berlin, Germany</p>
+                        <a class="btn btn-primary contact" href="#contact" role="button">Contact me</a>
+                    </div>
                 </div>
                 <!-- RIGHT SIDE - ABOUT SECTION-->
                 <div class="col-md-8 d-flex space60 left about">
@@ -129,7 +133,7 @@
     <section id="education" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 bottom-space-md">
                     <h2 class="display-4">Education</h2>
                     <ul>
                         <li class="active">
@@ -178,18 +182,22 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 d-flex flex-vcenter">
+                <div class="col-lg-8 d-flex flex-vcenter bottom-space-lg">
                     <h2 class="display-4">Contact</h2>
                     <?php include "resources/templates/contact.php"; ?>
                 </div>
-                <div class="col-md-4 d-flex flex-vcenter vcard-wrapper">
-                    <div class="vcard">
-                        <img src="<?php echo $profile_url ?>">
-                        <h3>Christian Helbig</h3>
-                        <p>Berlin, Germany</p>
+                <div class="col-lg-4 d-flex flex-vcenter vcard-wrapper">
+                    <div class="vcard d-flex">
+                        <div class="large-6">
+                            <img src="<?php echo $profile_url ?>">
+                        </div>
+                        <div class="large-6">
+                            <h3>Christian Helbig</h3>
+                            <p>Berlin, Germany</p>
                         <!-- LinkedIn -->       <a class='btn transparent-btn-dark' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a>
                         <!-- GitHub -->         <a class='btn transparent-btn-dark' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a>
                         <!-- Contact form -->   <a class='btn transparent-btn-dark' href='#contact'><i class='fas fa-envelope'></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
