@@ -1,33 +1,52 @@
 <?php
     if (isset($_POST['submit'])) {
-        $name = htmlspecialchars(stripslashes(trim($_POST['name'])));
-        $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
-        $phone = htmlspecialchars(stripslashes(trim($_POST['phone'])));
-        $subject = htmlspecialchars(stripslashes(trim($_POST['subject'])));
-        $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
+        $name       = sanitize($_POST['name']);
+        $email      = sanitize($_POST['email']);
+        $phone      = sanitize($_POST['phone']);
+        $subject    = sanitize($_POST['subject']);
+        $message    = sanitize($_POST['message']);
+    }
+
+    // Sanitize user input
+    function sanitize($data) {
+
+        filter_var($data, FILTER_SANITIZE_STRING);
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+
+        return $data;
     }
 ?>
 
-<form class="contact-form" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+<form class="contact-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
     <div class="row">
         <div class="col-md-6">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email address" required>
-
-            <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="Phone">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input class="form-control" type="text" id="phone" name="phone" placeholder="Phone">
+            </div>
         </div>
         <div class="col-md-6">
-            <label for="message">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="subject" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Message" required></textarea>
-
-            <button type="submit" class="submit">Send</button>
+            <div class="form-group">
+                <label for="message">Subject</label>
+                <input class="form-control" type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" name="submit">Send</button>
+            </div>
 <!--            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">-->
         </div>
     </div>

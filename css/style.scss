@@ -16,6 +16,7 @@ $emphasize-color-2: #B52072;
 $text-color-dark: #021859;
 $text-color-bright: #F2F2F2;
 $section-emphasize: #bfe5fb;
+$box-background: #EEEEEE;
 
 /*
  * General
@@ -27,6 +28,10 @@ body {
 
 .text-bright {
   color: $text-color-bright;
+}
+
+.text-dark {
+  color: $text-color-dark;
 }
 
 .text-emphasize {
@@ -76,7 +81,7 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: $text-color-dark;
+    color: $emphasize-color-2;
     transition: color ease 200ms;
   }
 }
@@ -99,6 +104,16 @@ h3 {
 
 .transparent-btn {
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+
+  &:hover {
+    background-color: $text-color-bright;
+    color: $main-color;
+  }
+}
+
+.transparent-btn-dark {
+  color: $text-color-dark;
   border-radius: 0;
 
   &:hover {
@@ -320,6 +335,31 @@ h3 {
     li:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+/*
+ * Contact
+ */
+
+.vcard-wrapper {
+  padding: 0 40px;
+}
+
+.vcard {
+  text-align: center;
+  padding: 40px;
+  background: $box-background;
+
+  img {
+    position: relative;
+    max-width: 80%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-bottom: 0;
   }
 }
 

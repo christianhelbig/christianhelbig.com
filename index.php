@@ -1,5 +1,9 @@
 <?php include "resources/templates/header.php"; ?>
 
+    <?php
+        $profile_url = "images/profilepic.png";
+    ?>
+
     <div class="jumbotron hero d-flex">
         <nav class="nav hero-navbar">
             <?php include "resources/templates/navbar.php"; ?>
@@ -8,9 +12,9 @@
             <h1 class="display-3 text-bright">Hello, I'm <span class="text-emphasize">Christian Helbig</span>!</h1>
             <p class="font-italic text-bright">computer science undergraduate // tech enthusiast // aspiring
                 developer</p>
-            <!-- LinkedIn -->       <a class="btn transparent-btn text-bright" target="_blank" href="https://www.linkedin.com/in/christian-helbig/"><i class="fab fa-linkedin-in"></i></a>
-            <!-- GitHub -->         <a class="btn transparent-btn text-bright" target="_blank" href="https://github.com/christianhelbig"><i class="fab fa-github"></i></a>
-            <!-- Contact form -->   <a class="btn transparent-btn text-bright" href="#contact"><i class="fas fa-envelope"></i></a>
+            <!-- LinkedIn -->       <a class='btn transparent-btn text-bright' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a>
+            <!-- GitHub -->         <a class='btn transparent-btn text-bright' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a>
+            <!-- Contact form -->   <a class='btn transparent-btn text-bright' href='#contact'><i class='fas fa-envelope'></i></a>
         </div>
         <div class="container position-bottom">
             <i class="fas fa-chevron-down"></i>
@@ -24,7 +28,7 @@
             <div class="row">
                 <!-- LEFT SIDE - PROFILE AREA-->
                 <div class="col-md-4 d-flex profile text-center space60 right">
-                    <img src="images/profilepic.png">
+                    <img src="<?php echo $profile_url ?>">
                     <h3>Christian Helbig</h3>
                     <p>Berlin, Germany</p>
                     <a class="btn btn-primary contact" href="#contact" role="button">Contact me</a>
@@ -174,12 +178,19 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 d-flex-inline">
                     <h2 class="display-4">Contact</h2>
-                    <p>You want to offer me a job or have a question? Please send me a mail and I will get back to you as soon as possible!</p>
-                    <a href="mailto.php"><button type="button" class="btn btn-primary contact">E-Mail</button></a>
+                    <?php include "resources/templates/contact.php"; ?>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 d-flex-inline vcard-wrapper">
+                    <div class="vcard">
+                        <img src="<?php echo $profile_url ?>">
+                        <h3>Christian Helbig</h3>
+                        <p>Berlin, Germany</p>
+                        <!-- LinkedIn -->       <a class='btn transparent-btn-dark' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a>
+                        <!-- GitHub -->         <a class='btn transparent-btn-dark' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a>
+                        <!-- Contact form -->   <a class='btn transparent-btn-dark' href='#contact'><i class='fas fa-envelope'></i></a>
+                    </div>
                 </div>
             </div>
         </div>
