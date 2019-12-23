@@ -1,17 +1,18 @@
 <?php
     if (isset($_POST['submit'])) {
-        $name       = sanitize($_POST['name']);
-        $email      = sanitize($_POST['email']);
-        $phone      = sanitize($_POST['phone']);
-        $subject    = sanitize($_POST['subject']);
-        $message    = sanitize($_POST['message']);
+        $name       = filter_var(sanitize($_POST['name']), FILTER_SANITIZE_STRING);
+        $email      = filter_var(sanitize($_POST['email']), FILTER_SANITIZE_EMAIL);
+        $phone      = filter_var(sanitize($_POST['phone']), FILTER_SANITIZE_STRING);
+        $website    = filter_var(sanitize($_POST['website']), FILTER_SANITIZE_URL);
+        $subject    = filter_var(sanitize($_POST['subject']), FILTER_SANITIZE_STRING);
+        $message    = filter_var(sanitize($_POST['message']), FILTER_SANITIZE_STRING);
     }
 
     // Sanitize user input
     function sanitize($data) {
 
-        filter_var($data, FILTER_SANITIZE_STRING);
         $data = trim($data);
+        $data = strip_tags($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
 
@@ -34,6 +35,10 @@
                 <label for="phone">Phone</label>
                 <input class="form-control" type="text" id="phone" name="phone" placeholder="Phone">
             </div>
+            <div class="form-group">
+                <label for="website">Website</label>
+                <input class="form-control" type="text" id="website" name="website" placeholder="Website">
+            </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
@@ -42,7 +47,7 @@
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block" name="submit">Send</button>
@@ -56,7 +61,8 @@
     if (isset($_POST['submit'])) {
         $body = "Name: $name\n" .
                 "E-Mail: $email\n" .
-                "Phone: $phone\n\n" .
+                "Phone: $phone\n" .
+                "Website: $website\n\n" .
                 "Message: \n $message\n";
 
         if (mail("hello@christianhelbig.com", $subject, $body)) {

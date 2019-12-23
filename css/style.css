@@ -54,7 +54,8 @@ body {
  * Sections
  */
 .flex-vcenter {
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*
@@ -297,6 +298,11 @@ h3 {
 /*
  * Contact
  */
+.contact-form #message {
+  height: 152px;
+  /* Hardcoded (shame!) -> gonna fix later */
+}
+
 .vcard-wrapper {
   padding: 0 40px;
 }
@@ -304,7 +310,7 @@ h3 {
 .vcard {
   text-align: center;
   padding: 40px;
-  background: #EEEEEE;
+  background: #f4f4f4;
 }
 .vcard img {
   position: relative;

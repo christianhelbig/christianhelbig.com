@@ -178,11 +178,11 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 d-flex-inline">
+                <div class="col-md-8 d-flex flex-vcenter">
                     <h2 class="display-4">Contact</h2>
                     <?php include "resources/templates/contact.php"; ?>
                 </div>
-                <div class="col-md-4 d-flex-inline vcard-wrapper">
+                <div class="col-md-4 d-flex flex-vcenter vcard-wrapper">
                     <div class="vcard">
                         <img src="<?php echo $profile_url ?>">
                         <h3>Christian Helbig</h3>
