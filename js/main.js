@@ -8,18 +8,13 @@ testimonials();
 
 function testimonials() {
     let testimonials = jQuery(".testimonials .element");
+    resizeElements(testimonials); // resize height of testimonial elements
+
+    window.onresize = function(){
+        resizeElements();
+    };
+
     let i = 1;
-
-    /* Fix the height of testimonial wrapper, to prevent page resizing */
-    let biggestHeight = 0;
-    jQuery(testimonials).each(function() {      /* Check all elements */
-        if (jQuery(this).outerHeight() > biggestHeight) {
-            biggestHeight = jQuery(this).outerHeight();      /* Update height if necessary */
-        }
-    });
-
-    /* Update height*/
-    jQuery(".testimonials-wrapper").css("height", biggestHeight + "px");
 
     setInterval(function(){
         changeActiveTestimonial(i, testimonials);
@@ -31,8 +26,29 @@ function testimonials() {
     }, 6000);
 }
 
-function changeActiveTestimonial(i, testimonials) {
+function resizeElements(testimonials) {
+    jQuery(testimonials).each(function() {
+        jQuery(this).css("height", "unset");    // remove height, in case of resizing window
+    });
 
+    /* Fix the height of testimonial wrapper, to prevent page resizing */
+    let biggestHeight = 0;
+    jQuery(testimonials).each(function() {                      /* Check all elements */
+        if (jQuery(this).outerHeight() > biggestHeight) {
+            biggestHeight = jQuery(this).outerHeight();         /* Update height if necessary */
+        }
+    });
+
+    jQuery(testimonials).each(function() {
+        jQuery(this).css("height", biggestHeight);
+    });
+
+    /* Update height*/
+    // jQuery(".testimonials-wrapper").css("height", biggestHeight + "px");
+
+}
+
+function changeActiveTestimonial(i, testimonials) {
     jQuery(".testimonials").find(".active").first().fadeOut(500, function() {
         jQuery(this).removeClass("active");
         jQuery(testimonials).eq(i).fadeIn(500, function() {
