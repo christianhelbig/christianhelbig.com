@@ -49,10 +49,10 @@
                 <label for="message">Message</label>
                 <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required></textarea>
             </div>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block" name="submit">Send</button>
             </div>
-<!--            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">-->
         </div>
     </div>
 </form>

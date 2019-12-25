@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
 
     <title>Christian Helbig</title>
+    <meta name="description" content="I'm a computer science student and aspiring (software) developer based in Berlin, Germany. Contact me for new possibilities to grow.">
+
+    <!-- Prevent search engine from indexing datenschutz and impressum -->
+    <?php if(strpos($_SERVER['PHP_SELF'], "datenschutz.php") || strpos($_SERVER['PHP_SELF'], "impressum.php")) {
+        echo '<meta name="robots" content="noindex, nofollow">';
+    }; ?>
 
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
