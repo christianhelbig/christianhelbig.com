@@ -49,7 +49,7 @@
                 <label for="message">Message</label>
                 <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required></textarea>
             </div>
-            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+            <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block" name="submit">Send</button>
             </div>
@@ -59,16 +59,28 @@
 
 <?php
     if (isset($_POST['submit'])) {
-        $body = "Name: $name\n" .
+
+        // validate reCaptcha
+        if(isset($_POST['g-recaptcha-response'])) {
+            $captcha = $_POST['g-recaptcha-response'];
+        }
+
+        $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=***REMOVED***&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+
+        if($response['success'] == false) {
+            echo "<p class='msg error'>Recaptcha failed.</p>";
+        } else {
+            $body = "Name: $name\n" .
                 "E-Mail: $email\n" .
                 "Phone: $phone\n" .
                 "Website: $website\n\n" .
                 "Message: \n $message\n";
 
-        if (mail("hello@christianhelbig.com", $subject, $body)) {
-            echo "<p class='msg success'>Message sent!</p>";
-        } else {
-            echo "<p class='msg error'>Couldn't send message, please try again!</p>";
-        };
+            if (mail("hello@christianhelbig.com", $subject, $body)) {
+                echo "<p class='msg success'>Message sent!</p>";
+            } else {
+                echo "<p class='msg error'>Couldn't send message, please try again!</p>";
+            };
+        }
     }
 ?>
