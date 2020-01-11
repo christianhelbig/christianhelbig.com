@@ -1,6 +1,6 @@
 <?php
 
-    include "../../../mail_credentials.php";     # include mail credentials, which are kept in separate files for security reasons
+    include "mail_credentials.php";     # include mail credentials, which are kept in separate files for security reasons
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -111,7 +111,7 @@
                 echo "<p class='msg text-success'>Message has been sent</p>";
             } catch (Exception $e) {
                 echo "<p class='msg text-danger'>Message could not be sent.</p>";
-                echo "<p class='msg text-danger'>Mailer Error: . $mail->ErrorInfo</p>";
+                echo "<p class='msg text-danger'>Mailer Error:" . $mail->ErrorInfo . "</p>";
             }
         }
     }
