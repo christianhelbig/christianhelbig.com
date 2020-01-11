@@ -8,8 +8,8 @@
     <title>Christian Helbig</title>
     <meta name="description" content="I'm a computer science student and aspiring (software) developer based in Berlin, Germany. Contact me for new possibilities to grow.">
 
-    <!-- Prevent search engine from indexing datenschutz and impressum -->
     <?php if(strpos($_SERVER['PHP_SELF'], "datenschutz.php") || strpos($_SERVER['PHP_SELF'], "impressum.php")) {
+        // Prevent search engine from indexing datenschutz and impressum
         echo '<meta name="robots" content="noindex, nofollow">';
     }; ?>
 

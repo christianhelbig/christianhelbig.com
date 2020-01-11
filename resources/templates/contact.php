@@ -1,6 +1,6 @@
 <?php
 
-    include "mail_credentials.php";     # include mail credentials, which are kept in separate files for security reasons
+    include "../../../mail_credentials.php";     # include mail credentials, which are kept in separate files for security reasons
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
