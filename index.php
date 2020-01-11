@@ -1,9 +1,5 @@
 <?php include "resources/templates/header.php"; ?>
 
-    <?php
-        $profile_url = "images/profilepic.png";
-    ?>
-
     <div class="jumbotron hero d-flex">
         <nav class="nav hero-navbar">
             <?php include "resources/templates/navbar.php"; ?>
@@ -29,7 +25,7 @@
                 <!-- LEFT SIDE - PROFILE AREA-->
                 <div class="col-md-4 d-flex profile text-center space60 right bottom-space-md">
                     <div class="med-6">
-                        <img src="<?php echo $profile_url ?>">
+                        <img src="images/profilepic.png">
                     </div>
                     <div class="med-6">
                         <h3>Christian Helbig</h3>
@@ -189,7 +185,7 @@
                 <div class="col-lg-4 d-flex flex-vcenter vcard-wrapper">
                     <div class="vcard d-flex">
                         <div class="large-6">
-                            <img src="<?php echo $profile_url ?>">
+                            <img src="images/profilepic.png">
                         </div>
                         <div class="large-6">
                             <h3>Christian Helbig</h3>
