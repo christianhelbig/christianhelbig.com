@@ -117,11 +117,11 @@ h3 {
 }
 
 .transparent-btn-dark {
-  color: #021859;
+  color: #B52072;
   border-radius: 0;
+  font-size: 1.1rem;
 }
 .transparent-btn-dark:hover {
-  background-color: #fefefe;
   color: #021859;
 }
 
@@ -389,7 +389,7 @@ h3 {
 .vcard {
   text-align: center;
   padding: 40px;
-  background: #f4f4f4;
+  background: #f6f6f6;
   flex-direction: column;
 }
 .vcard .large-6 {

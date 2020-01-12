@@ -124,7 +124,7 @@
                     <ul>
                         <li class="active">
                             <h6>Oct 2018 - Present</h6>
-                            <p>Computer Science undergraduate @ <a href="https://www.tu-berlin.de/menue/home/" target="_blank">University of Technology Berlin</a> in Berlin, Germany</p>
+                            <p>Computer Science undergraduate @ <a href="https://www.tu-berlin.de/menue/home/" target="_blank">University of Technology Berlin</a></p>
                         </li>
                         <li>
                             <h6>Jul 2017 - May 2018</h6>
@@ -141,7 +141,7 @@
                     <ul>
                         <li class="active">
                             <h6>Jan 2019 - Present</h6>
-                            <p>Technical Specialist @ <a href="https://www.apple.com/de/retail/kurfuerstendamm/" target="_blank">Apple Kurfürstendamm</a> in Berlin, Germany</p>
+                            <p>Technical Specialist @ <a href="https://www.apple.com/de/retail/kurfuerstendamm/" target="_blank">Apple Kurfürstendamm Berlin</a></p>
                         </li>
                         <li>
                             <h6>Nov 2017 - Jan 2019</h6>
