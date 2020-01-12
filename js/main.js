@@ -10,12 +10,14 @@ function testimonials() {
     let testimonials = jQuery(".testimonials .element");
     resizeElements(testimonials); // resize height of testimonial elements
 
+    // change size of testimonial wrapper, when window is being resized
     window.onresize = function(){
         resizeElements();
     };
 
     let i = 1;
 
+    // change testimonial every 6s
     setInterval(function(){
         changeActiveTestimonial(i, testimonials);
         if (i === testimonials.length - 1) {
@@ -51,6 +53,13 @@ function resizeElements(testimonials) {
 function changeActiveTestimonial(i, testimonials) {
     jQuery(".testimonials").find(".active").first().fadeOut(500, function() {
         jQuery(this).removeClass("active");
+
+        // make sure all testimonials are hidden
+        jQuery(testimonials).each(function() {
+            jQuery(this).hide();
+        });
+
+        // fade in new testimonial
         jQuery(testimonials).eq(i).fadeIn(500, function() {
             jQuery(this).addClass("active");
         });
