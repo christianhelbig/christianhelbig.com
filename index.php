@@ -8,9 +8,9 @@
             <h1 class="display-3 text-bright">Hello, I'm <span class="text-emphasize">Christian Helbig</span>!</h1>
             <p class="font-italic text-bright">computer science undergraduate // tech enthusiast // aspiring
                 developer</p>
-            <!-- LinkedIn -->       <a class='btn transparent-btn text-bright' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a>
-            <!-- GitHub -->         <a class='btn transparent-btn text-bright' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a>
-            <!-- Contact form -->   <a class='btn transparent-btn text-bright' href='#contact'><i class='fas fa-envelope'></i></a>
+            <!-- LinkedIn      <a class='btn transparent-btn text-bright' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a> -->
+            <!-- GitHub        <a class='btn transparent-btn text-bright' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a> -->
+            <!-- Contact form  <a class='btn transparent-btn text-bright' href='#contact'><i class='fas fa-envelope'></i></a> -->
         </div>
         <div class="container position-bottom">
             <i class="fas fa-chevron-down"></i>
@@ -23,18 +23,9 @@
         <div class="container">
             <div class="row">
                 <!-- LEFT SIDE - PROFILE AREA-->
-                <div class="col-md-4 d-flex profile text-center space60 right bottom-space-md">
-                    <div class="med-6">
-                        <img src="images/profilepic.png">
-                    </div>
-                    <div class="med-6">
-                        <h3>Christian Helbig</h3>
-                        <p>Berlin, Germany</p>
-                        <a class="btn btn-primary contact" href="#contact" role="button">Contact me</a>
-                    </div>
-                </div>
+                <?php include "resources/templates/vcard.php"; ?>
                 <!-- RIGHT SIDE - ABOUT SECTION-->
-                <div class="col-md-8 d-flex space60 left about">
+                <div class="col-md-8 d-flex left about">
                     <h2 class="display-4">About me</h2>
                     <div class="text">
                         <p>For me, programming is not just a job - it’s a passion. Whenever I dive into a new project, I start to forget the world around me and hours pass without me even noticing.</p>
@@ -182,20 +173,7 @@
                     <h2 class="display-4">Contact</h2>
                     <?php include "resources/templates/contact.php"; ?>
                 </div>
-                <div class="col-lg-4 d-flex flex-vcenter vcard-wrapper">
-                    <div class="vcard d-flex">
-                        <div class="large-6">
-                            <img src="images/profilepic.png">
-                        </div>
-                        <div class="large-6">
-                            <h3>Christian Helbig</h3>
-                            <p>Berlin, Germany</p>
-                        <!-- LinkedIn -->       <a class='btn transparent-btn-dark' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a>
-                        <!-- GitHub -->         <a class='btn transparent-btn-dark' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a>
-                        <!-- Contact form -->   <a class='btn transparent-btn-dark' href='#contact'><i class='fas fa-envelope'></i></a>
-                        </div>
-                    </div>
-                </div>
+                <?php include "resources/templates/vcard.php"; ?>
             </div>
         </div>
     </section>
