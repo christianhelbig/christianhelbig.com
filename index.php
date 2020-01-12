@@ -6,8 +6,7 @@
         </nav>
         <div class="container text-center justify-content-center align-self-center">
             <h1 class="display-3 text-bright">Hello, I'm <span class="text-emphasize">Christian Helbig</span>!</h1>
-            <p class="font-italic text-bright">computer science undergraduate // tech enthusiast // aspiring
-                developer</p>
+            <p class="font-italic text-bright">computer science undergraduate // tech enthusiast // aspiring developer</p>
             <!-- LinkedIn      <a class='btn transparent-btn text-bright' target='_blank' href='https://www.linkedin.com/in/christian-helbig/'><i class='fab fa-linkedin-in'></i></a> -->
             <!-- GitHub        <a class='btn transparent-btn text-bright' target='_blank' href='https://github.com/christianhelbig'><i class='fab fa-github'></i></a> -->
             <!-- Contact form  <a class='btn transparent-btn text-bright' href='#contact'><i class='fas fa-envelope'></i></a> -->
@@ -29,8 +28,8 @@
                     <h2 class="display-4">About me</h2>
                     <div class="text">
                         <p>For me, programming is not just a job - it’s a passion. Whenever I dive into a new project, I start to forget the world around me and hours pass without me even noticing.</p>
-                        <p>Things started, when I was a kid and my mother gave me her old computer. I was instantly fascinated and wanted to understand, how such 'magic' is even possible. I started to teach myself how to make websites, I did internships on my summer breaks and after High School, I finally started freelancing as a Front-End Web-Developer.</p>
-                        <p>But I wanted more. So after I finished my year abroad, I moved to Berlin, started to study computer science at the University of Technology Berlin and got a new job at Apple.</p>
+                        <p>Things started, when I was a kid and my mother gave me her old computer. I was instantly fascinated and wanted to understand, how such 'magic' is even possible. I started to teach myself programming, I did internships on my summer breaks and after High School, I finally started freelancing as a Front-End Web-Developer.</p>
+                        <p>But I wanted more. So after I finished my year abroad in Australia, I moved to Berlin, started to study computer science at the University of Technology Berlin and got a new job at Apple.</p>
                         <p>I'm always seeking new possibilities to grow. That's why I would love to gain more experience in Software Development soon and use the techniques and programming languages I've learnt in university.</p>
                     </div>
                     <!-- TESTIMONIALS -->
@@ -125,11 +124,11 @@
                     <ul>
                         <li class="active">
                             <h6>Oct 2018 - Present</h6>
-                            <p>CS undergraduate @ <a href="https://www.tu-berlin.de/menue/home/" target="_blank">University of Technology Berlin</a></p>
+                            <p>Computer Science undergraduate @ <a href="https://www.tu-berlin.de/menue/home/" target="_blank">University of Technology Berlin</a> in Berlin, Germany</p>
                         </li>
                         <li>
                             <h6>Jul 2017 - May 2018</h6>
-                            <p>Working Holiday in Australia</p>
+                            <p>Work and Travel in Australia</p>
                         </li>
                         <li>
                             <h6>Jun 2017</h6>
@@ -142,7 +141,7 @@
                     <ul>
                         <li class="active">
                             <h6>Jan 2019 - Present</h6>
-                            <p>Technical Specialist @ <a href="https://www.apple.com/de/retail/kurfuerstendamm/" target="_blank">Apple Kurfürstendamm</a></p>
+                            <p>Technical Specialist @ <a href="https://www.apple.com/de/retail/kurfuerstendamm/" target="_blank">Apple Kurfürstendamm</a> in Berlin, Germany</p>
                         </li>
                         <li>
                             <h6>Nov 2017 - Jan 2019</h6>
