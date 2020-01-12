@@ -8,13 +8,16 @@
     <title>Christian Helbig</title>
     <meta name="description" content="I'm a computer science student and aspiring (software) developer based in Berlin, Germany. Contact me for new possibilities to grow.">
 
-    <?php if(strpos($_SERVER['PHP_SELF'], "datenschutz.php") || strpos($_SERVER['PHP_SELF'], "impressum.php")) {
+    <?php if(strpos($_SERVER['PHP_SELF'], "datenschutz") || strpos($_SERVER['PHP_SELF'], "impressum")) {
         // Prevent search engine from indexing datenschutz and impressum
         echo '<meta name="robots" content="noindex, nofollow">';
-    }; ?>
+    };
+
+    // create css version tag for cache bursting
+    $cssVersion = "1.0.0"; ?>
 
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=<?php echo $cssVersion; ?>">
 </head>
 <body>
 

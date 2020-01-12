@@ -1,3 +1,7 @@
+<?php
+    // create js version tag for cache bursting
+    $jsVersion = "1.0.0";
+?>
 
     <div id="footer" class="text-bright section-slim section-emphasize">
         <div class="container">
@@ -7,8 +11,8 @@
                 </div>
                 <div class="col-md-6">
                     <ul class="footer-nav">
-                        <li><a href="/impressum.php">Impressum</a></li>
-                        <li><a href="/datenschutz.php">Datenschutz</a></li>
+                        <li><a href="/impressum">Impressum</a></li>
+                        <li><a href="/datenschutz">Datenschutz</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,6 +32,6 @@
             });
         });
     </script>
-    <script defer src="/js/main.js"></script>
+    <script defer src="/js/main.js?v=<?php echo $jsVersion; ?>"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 <div class="section">
     <div class="container">
-        <a href="/index.php">< Back to website</a>
+        <a href="/">< Back to website</a>
         <hr>
         <h1>Impressum</h1>
 
