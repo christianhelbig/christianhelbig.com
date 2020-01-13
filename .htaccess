@@ -26,6 +26,10 @@ RewriteRule "(^|/)\." - [F]
 # Caching
 ############
 
+<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|svg|js|css|swf)$">
+    Header set Cache-Control "max-age=84600, public"
+</filesMatch>
+
 <IfModule mod_expires.c>
     ExpiresActive on
     ExpiresDefault                                      "access plus 1 month"
