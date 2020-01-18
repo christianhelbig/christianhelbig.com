@@ -28,6 +28,11 @@ body {
 .section {
   padding: 80px 0;
 }
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 60px 0;
+  }
+}
 
 .section-slim {
   padding: 20px 0;
@@ -222,17 +227,22 @@ h3 {
   position: relative;
   margin-bottom: 0;
 }
-@media screen and (max-width: 587px) {
+@media screen and (max-width: 767px) {
   .hero h1 {
-    font-size: 11vw;
+    font-size: 11vmin;
   }
   .hero p {
-    font-size: 3.5vw;
+    font-size: 3.5vmin;
   }
 }
 @media screen and (min-width: 767px) {
   .hero {
     padding: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    height: 70vh;
   }
 }
 .hero .position-bottom {
@@ -291,6 +301,11 @@ h3 {
 .about {
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .about {
+    margin-top: 30px;
+  }
 }
 
 .testimonials-wrapper {
@@ -371,6 +386,11 @@ h3 {
     justify-content: center;
   }
 }
+@media screen and (max-width: 767px) {
+  #projects h1 {
+    margin-bottom: 20px;
+  }
+}
 
 /*
  * Contact
@@ -398,12 +418,12 @@ h3 {
 .vcard .large-6 {
   flex-basis: unset;
 }
-@media screen and (min-width: 767px) and (max-width: 992px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
   .vcard .large-6 {
     flex-basis: 50%;
   }
 }
-@media screen and (max-width: 992px) and (min-width: 767px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
   .vcard {
     flex-direction: row;
     align-items: center;

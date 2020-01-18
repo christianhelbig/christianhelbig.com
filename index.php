@@ -24,7 +24,7 @@
                 <!-- LEFT SIDE - PROFILE AREA-->
                 <?php include "resources/templates/vcard.php"; ?>
                 <!-- RIGHT SIDE - ABOUT SECTION-->
-                <div class="col-md-8 d-flex left about">
+                <div class="col-lg-8 d-flex left about">
                     <h2 class="display-4">About me</h2>
                     <div class="text">
                         <p>For me, programming is not just a job - it’s a passion. Whenever I dive into a new project, I start to forget the world around me and hours pass without me even noticing.</p>
@@ -156,8 +156,8 @@
     <section id="projects" class="section section-emphasize">
         <div class="container">
             <div class="row">
-                <div class="col-md-9 d-flex">
-                    <h1 class="text-bright">Check out my GitHub!</h1>
+                <div class="col-md-9 d-flex text-center">
+                    <h1 class="text-bright center">Check out my GitHub!</h1>
                 </div>
                 <div class="col-md-3 d-flex flex-vcenter">
                     <a class="btn btn-light btn-block btn-valign-center btn-icon" target="_blank" href="https://github.com/christianhelbig" role="button"><i class="fab fa-github"></i> GitHub</a>

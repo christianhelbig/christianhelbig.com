@@ -42,6 +42,10 @@ body {
 
 .section {
   padding: 80px 0;
+
+  @media screen and (max-width: $break-medium) {
+    padding: 60px 0;
+  }
 }
 
 .section-slim {
@@ -252,17 +256,21 @@ h3 {
   position: relative;
   margin-bottom: 0;
 
-  @media screen and (max-width: $break-small + 10) {
+  @media screen and (max-width: $break-medium) {
     h1 {
-      font-size: 11vw;
+      font-size: 11vmin;
     }
     p {
-      font-size: 3.5vw;
+      font-size: 3.5vmin;
     }
   }
 
   @media screen and (min-width: $break-medium) {
     padding: 120px;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    height: 70vh;
   }
 
   .position-bottom {
@@ -321,6 +329,10 @@ h3 {
 .about {
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: $break-large) {
+    margin-top: 30px;
+  }
 }
 
 .testimonials-wrapper {
@@ -410,9 +422,17 @@ h3 {
  * Github
  */
 
-#projects .d-flex {
+#projects {
+  .d-flex {
+    @media screen and (max-width: $break-medium) {
+      justify-content: center;
+    }
+  }
+
   @media screen and (max-width: $break-medium) {
-    justify-content: center;
+    h1 {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -441,12 +461,12 @@ h3 {
   .large-6 {
     flex-basis: unset;
 
-    @media screen and (min-width: $break-medium) and (max-width: $break-large) {
+    @media screen and (min-width: $break-small) and (max-width: $break-large) {
       flex-basis: 50%;
     }
   }
 
-  @media screen and (max-width: $break-large) and (min-width: $break-medium) {
+  @media screen and (min-width: $break-small) and (max-width: $break-large) {
     flex-direction: row;
     align-items: center;
   }
