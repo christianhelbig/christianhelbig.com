@@ -1,6 +1,8 @@
 <?php
     // create js version tag for cache bursting
-    $jsVersion = "1.0.0";
+    $jsVersion = "1.0.1";
+
+    include realpath(__DIR__ . DIRECTORY_SEPARATOR . '../../../recaptcha_credentials.php');     # include recaptcha credentials, which are kept in separate file
 ?>
 
     <div id="footer" class="text-bright section-slim section-emphasize">
@@ -21,10 +23,10 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script defer src="/js/fs.all.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=***REMOVED***"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $recaptcha_sitekey; ?>"></script>
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('***REMOVED***', { action: 'contact' }).then(function (token) {
+            grecaptcha.execute('<?php echo $recaptcha_sitekey; ?>', { action: 'contact' }).then(function (token) {
                 var recaptchaResponse = document.getElementById('recaptchaResponse');
                 recaptchaResponse.value = token;
             });

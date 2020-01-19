@@ -1,6 +1,7 @@
 <?php
 
     include realpath(__DIR__ . DIRECTORY_SEPARATOR . '../../../mail_credentials.php');     # include mail credentials, which are kept in separate files for security reasons
+    include realpath(__DIR__ . DIRECTORY_SEPARATOR . '../../../recaptcha_credentials.php');     # include recaptcha credentials, which are kept in separate file
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -70,7 +71,7 @@
         if(isset($_POST['g-recaptcha-response'])) {
             $captcha = $_POST['g-recaptcha-response'];
         }
-        $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=***REMOVED***&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+        $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $recaptcha_secret . "&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
 
         // Check recaptcha response
         if($response['success'] == false) {
