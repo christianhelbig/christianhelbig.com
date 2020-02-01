@@ -2,60 +2,104 @@
  * DON'T FORGET TO CACHE BURST WHEN MAKING CHANGES *
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/*
-* MAIN JS FILE
-* */
+//  Functions in this file
+//  ----------------------
+//  -> Testimonials
+//       testimonials() - testimonial slider
+//       testimonials_resizeElements() - helper for testimonials slider
+//       changeActiveTestimonial() - helper for testimonials slider
+
+/* * * * * * * * * * * * * * * * * *
+ * Execute functions               *
+ * * * * * * * * * * * * * * * * * */
 
 testimonials();
 
-/* Testimonials About */
+////// END 'Execute functions' //////
+
+/* * * * * * * * * * * * * * * * * *
+ * Testimonials                    *
+ * * * * * * * * * * * * * * * * * */
 
 function testimonials() {
+    /**
+     * Testimonial slider.
+     *
+     * This function implements the slider functionality for testimonials. It changes the active testimonial
+     * every 6 seconds.
+     *
+     * @param: none
+     * @return: void
+     */
+
+    // get all testimonial elements and store them in variable
     let testimonials = jQuery(".testimonials .element");
-    resizeElements(testimonials); // resize height of testimonial elements
+    testimonials_resizeElements(testimonials);
 
-    // change size of testimonial wrapper, when window is being resized
-    window.onresize = function(){
-        resizeElements();
-    };
+    // change height of testimonials, when window is being resized
+    window.onresize = function(){ testimonials_resizeElements() };
 
+    // fade testimonial every 6 seconds
     let i = 1;
-
-    // change testimonial every 6s
     setInterval(function(){
+        // call function to perform fade animation
         changeActiveTestimonial(i, testimonials);
-        if (i === testimonials.length - 1) {
+
+        if (i === testimonials.length - 1) {    // if this is the last testimonial, reset index i
             i = 0;
-        } else {
+        } else {                                // otherwise increase index
             i++;
         }
     }, 6000);
 }
 
-function resizeElements(testimonials) {
+function testimonials_resizeElements(testimonials) {
+    /**
+     * Resizes testimonials so they have the same height.
+     *
+     * This function resizes all testimonial heights when there is a window resize event.
+     * This is used to ensure the same height for testimonials and a smooth transition.
+     *
+     * @listens: window.onresize
+     * @param: {Array} testimonials -> Array with testimonial elements (class .testimonials .element)
+     * @return: {void}
+     */
+
+    // remove height attribute for all testimonial elements
     jQuery(testimonials).each(function() {
-        jQuery(this).css("height", "unset");    // remove height, in case of resizing window
+        jQuery(this).css("height", "unset");
     });
 
-    /* Fix the height of testimonial wrapper, to prevent page resizing */
-    let biggestHeight = 0;
-    jQuery(testimonials).each(function() {                      /* Check all elements */
-        if (jQuery(this).outerHeight() > biggestHeight) {
-            biggestHeight = jQuery(this).outerHeight();         /* Update height if necessary */
+    // get the biggest height of all testimonial elements
+    let maxHeight = 0;
+    jQuery(testimonials).each(function() {
+        if (jQuery(this).outerHeight() > maxHeight) {
+            maxHeight = jQuery(this).outerHeight();
         }
     });
 
+    // change height to maximum height for all testimonial elements
     jQuery(testimonials).each(function() {
-        jQuery(this).css("height", biggestHeight);
+        jQuery(this).css("height", max_height);
     });
-
-    /* Update height*/
-    // jQuery(".testimonials-wrapper").css("height", biggestHeight + "px");
 
 }
 
 function changeActiveTestimonial(i, testimonials) {
+    /**
+     * Fades the testimonials.
+     *
+     * This function is used to fade out the current testimonial and fade in the next one, once the fadeOut()
+     * animation is finished.
+     *
+     * @param: {Integer} i -> index of testimonial to be faded in
+     * @param: {Array} testimonials -> Array with testimonial elements (class .testimonials .element)
+     * @return: {void}
+     */
+
+    // fadeOut element that is currently active
     jQuery(".testimonials").find(".active").first().fadeOut(500, function() {
+        // when animation is finished, remove class active
         jQuery(this).removeClass("active");
 
         // make sure all testimonials are hidden
@@ -69,3 +113,6 @@ function changeActiveTestimonial(i, testimonials) {
         });
     });
 }
+
+////// END 'Testimonials' //////
+
