@@ -78,7 +78,7 @@
             <h6>Programming</h6>
             <!-- C          --><div class="progress"><div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">C</div></div>
             <!-- Java       --><div class="progress"><div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Java</div></div>
-            <!-- Python     --><div class="progress"><div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Python</div></div>
+            <!-- Python     --><div class="progress"><div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Python</div></div>
             <!-- MIPS       --><div class="progress"><div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">MIPS Assembly</div></div>
             <h6>Human Languages</h6>
             <!-- German     --><div class="progress"><div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">German (native language)</div></div>
