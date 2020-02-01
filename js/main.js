@@ -80,7 +80,7 @@ function testimonials_resizeElements(testimonials) {
 
     // change height to maximum height for all testimonial elements
     jQuery(testimonials).each(function() {
-        jQuery(this).css("height", max_height);
+        jQuery(this).css("height", maxHeight);
     });
 
 }
