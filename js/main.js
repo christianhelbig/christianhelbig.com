@@ -124,8 +124,14 @@ function changeActiveTestimonial(i, testimonials) {
 
 function submitContactFormListener() {
     /**
+     * Submits form using ajax call
      *
+     * This function fires as soon as a submit button within a contact form is clicked (form needs to have
+     * class 'contact-form'). The submit button is being disabled and colors of the button are being changed.
      *
+     * @param none
+     * @listens click -> click on submit button within contact form
+     * @return {void}
      */
 
     // call this listener on all submit buttons in contact forms
