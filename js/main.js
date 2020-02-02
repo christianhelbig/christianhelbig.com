@@ -14,6 +14,7 @@
  * * * * * * * * * * * * * * * * * */
 
 testimonials();
+submitContactFormListener();
 
 ////// END 'Execute functions' //////
 
@@ -116,3 +117,47 @@ function changeActiveTestimonial(i, testimonials) {
 
 ////// END 'Testimonials' //////
 
+
+/* * * * * * * * * * * * * * * * * *
+ * Contact form                    *
+ * * * * * * * * * * * * * * * * * */
+
+function submitContactFormListener() {
+    /**
+     *
+     *
+     */
+
+    // call this listener on all submit buttons in contact forms
+    jQuery('.contact-form').each(function(){
+        let form = jQuery(this);
+        let btn = jQuery(this).find('button[type="submit"]').first();
+
+        // on button click
+        jQuery(btn).on('click', function(){
+            // prevent form submit
+            event.preventDefault();
+
+            // disable button and show 'processing' text
+            jQuery(btn).attr("disabled", true);
+            jQuery(btn).addClass('disabled');
+            jQuery(btn).text('Processing');
+
+            // serialize form data
+            let formData = jQuery(form).serialize();
+
+            // submit form using ajax
+            jQuery.ajax({
+                type: 'POST',
+                url: $(form).attr('action'),
+                data: formData
+            })
+                .done(function(response){ jQuery(form).find('#form-messages').append(response); })
+                .fail(function(response){ jQuery(form).find('#form-messages').append(response); })
+        })
+    })
+}
+
+function contactFormValidation() {
+    // TODO
+}
