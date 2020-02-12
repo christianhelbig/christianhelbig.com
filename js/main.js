@@ -158,8 +158,24 @@ function submitContactFormListener() {
                 url: $(form).attr('action'),
                 data: formData
             })
-                .done(function(response){ jQuery(form).find('#form-messages').append(response); })
-                .fail(function(response){ jQuery(form).find('#form-messages').append(response); })
+                .done(function(response){
+                    // add class success, which changes the color to green and change button text to 'Sent!'
+                    jQuery(btn).text('Sent!');
+                    jQuery(btn).addClass('btn-success');
+                })
+                .fail(function(response){
+                    // display error message, change button color, reenable button
+                    jQuery(btn).text('Error. Please try again!');
+                    jQuery(btn).addClass('btn-error');
+                    jQuery(btn).attr("disabled", false);
+                    jQuery(btn).removeClass('disabled');
+
+                    // after 3 seconds reset design
+                    setTimeout(function(){
+                        jQuery(btn).removeClass('btn-error');
+                        jQuery(btn).text('Send');
+                    }, 4000);
+                })
         })
     })
 }

@@ -149,6 +149,21 @@ a:hover {
   margin-right: 5px;
 }
 
+.btn-success {
+  background: #4BB543;
+  border-color: #4BB543;
+}
+
+.btn-error {
+  background: #a50000;
+  border-color: #a50000;
+  transition: background, border-color ease 0.4s;
+}
+.btn-error:hover {
+  background: #a50000;
+  border-color: #a50000;
+}
+
 /* Sections
 -------------------------------------------------- */
 .flex-vcenter {

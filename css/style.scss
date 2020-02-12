@@ -14,6 +14,8 @@ $text-color-dark: #021859;
 $text-color-bright: #F2F2F2;
 $section-emphasize: #bfe5fb;
 $box-background: #f6f6f6;
+$success: #4BB543;
+$error: #a50000;
 
 /* MEDIA QUERIES */
 $break-small: 577px;
@@ -177,6 +179,22 @@ a {
 
 .btn-icon svg {
   margin-right: 5px;
+}
+
+.btn-success {
+  background: $success;
+  border-color: $success;
+}
+
+.btn-error {
+  background: $error;
+  border-color: $error;
+  transition: background,border-color ease .4s;
+
+  &:hover {
+    background: $error;
+    border-color: $error;
+  }
 }
 
 

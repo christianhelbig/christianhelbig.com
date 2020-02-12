@@ -13,15 +13,14 @@ $email      = filter_var(sanitize($_POST['email']), FILTER_SANITIZE_EMAIL);
 $phone      = filter_var(sanitize($_POST['phone']), FILTER_SANITIZE_STRING);
 $website    = filter_var(sanitize($_POST['website']), FILTER_SANITIZE_URL);
 $subject    = filter_var(sanitize($_POST['subject']), FILTER_SANITIZE_STRING);
-$message    = filter_var(sanitize($_POST['message']), FILTER_SANITIZE_STRING);
+$message    = filter_var(sanitize($_POST['message']), FILTER_SANITIZE_SPECIAL_CHARS);
+$message    = str_replace('&#10;', "</br>", $message); // make sure textarea keeps line breaks
 
 // Sanitize user input
 function sanitize($data) {
 
     $data = trim($data);
-    $data = strip_tags($data);
     $data = stripslashes($data);
-    $data = htmlspecialchars($data);
 
     return $data;
 }
@@ -35,7 +34,7 @@ $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/
 // Check recaptcha response
 if($response['success'] == false) {
     // recaptcha ERROR
-    echo "<p class='msg text-danger'>Recaptcha failed.</p>";
+    http_response_code(400);
 } else {
     // recaptcha success
     // -> send message
@@ -57,20 +56,20 @@ if($response['success'] == false) {
         $mail->addReplyTo($email, $name);
 
         //Content
-        $body = "Name: $name</br>" .
-            "E-Mail: $email</br>" .
-            "Phone: $phone</br>" .
-            "Website: $website</br></br>" .
-            "Message: \n $message\n";
+        $body = "Name: " . $name . "</br>" .
+            "E-Mail: " . $email . "</br>" .
+            "Phone: " . $phone . "</br>" .
+            "Website: " . $website . "</br></br>" .
+            "Subject: " . $subject . "</br>" .
+            "Message: </br></br>" . $message . "</br>";
 
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body    = $body;
 
         $mail->send();
-        echo "<p class='msg text-success'>Message has been sent</p>";
+        http_response_code(200);
     } catch (Exception $e) {
-        echo "<p class='msg text-danger'>Message could not be sent.</p>";
-        echo "<p class='msg text-danger'>Mailer Error: " . $mail->ErrorInfo . "</p>";
+        http_response_code(500);
     }
 }
