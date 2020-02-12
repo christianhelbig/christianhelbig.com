@@ -376,14 +376,20 @@ a {
 }
 
 #skills {
-  color: white;
+  color: $text-color-bright;
 
   h2 {
     margin-bottom: 20px;
   }
 
+  h6 {
+    margin-top: 10px;
+  }
+
   .progress {
     border-radius: 0;
+    margin-bottom: 5px;
+    max-height: 5px;
   }
 
   .progress-bar {
@@ -391,6 +397,40 @@ a {
     text-align: left;
     color: $main-color;
     background-color: $emphasize-color-1;
+  }
+
+  .progress-bar-tag {
+    margin-bottom: 0;
+    font-size: .8rem;
+  }
+
+  @media screen and (min-width: $break-medium) {
+    .col-md-6:first-child {
+      padding-right: 25px;
+      border-right: 1px solid $text-color-bright;
+    }
+
+    .col-md-6:last-child {
+      padding-left: 25px;
+    }
+
+    .row {
+      margin-top: 20px;
+    }
+  }
+}
+
+.skill-element {
+  text-align: center;
+
+  .skill-icon {
+    fill: $text-color-bright;
+    max-width: 80%;
+  }
+
+  .skill-tag {
+    margin-top: 10px;
+    line-height: 1.2rem;
   }
 }
 

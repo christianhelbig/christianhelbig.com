@@ -16,7 +16,7 @@
     };
 
     // create css version tag for cache bursting
-    $cssVersion = "1.0.3"; ?>
+    $cssVersion = "1.0.4"; ?>
 
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css?v=<?php echo $cssVersion; ?>">

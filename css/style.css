@@ -334,19 +334,52 @@ a:hover {
 }
 
 #skills {
-  color: white;
+  color: #F2F2F2;
 }
 #skills h2 {
   margin-bottom: 20px;
 }
+#skills h6 {
+  margin-top: 10px;
+}
 #skills .progress {
   border-radius: 0;
+  margin-bottom: 5px;
+  max-height: 5px;
 }
 #skills .progress-bar {
   padding-left: 10px;
   text-align: left;
   color: #021859;
   background-color: #07C7F2;
+}
+#skills .progress-bar-tag {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 767px) {
+  #skills .col-md-6:first-child {
+    padding-right: 25px;
+    border-right: 1px solid #F2F2F2;
+  }
+  #skills .col-md-6:last-child {
+    padding-left: 25px;
+  }
+  #skills .row {
+    margin-top: 20px;
+  }
+}
+
+.skill-element {
+  text-align: center;
+}
+.skill-element .skill-icon {
+  fill: #F2F2F2;
+  max-width: 80%;
+}
+.skill-element .skill-tag {
+  margin-top: 10px;
+  line-height: 1.2rem;
 }
 
 /* Education and work experience
