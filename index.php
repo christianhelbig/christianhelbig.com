@@ -138,7 +138,7 @@
                     <p class="skill-tag">Git</p>
                 </div>
             </div>
-            <h6>Human Languages</h6>
+            <h6>Languages</h6>
             <div class="d-block">
                 <p class="progress-bar-tag">German (native language)</p>
                 <div class="progress"><div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div>
